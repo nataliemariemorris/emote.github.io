@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="en">
+    
+<head>
+    
+    <meta name="viewport" content="width=device-width,initial-scale=1.0">
+    <meta charset="utf-8">
+    <title>Emote</title>
+    <link rel="stylesheet" href="../css/main.css">
+    
+</head>  
+
+<body>
+    
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+    <script>
+    $(document).ready(function() {
+    
+    $(window).scroll( function(){
+    
+        $('p, h1, h2').each( function(i){
+    
+            var bottom_of_object = $(this).position().top + $(this).outerHeight() / 3;
+            var bottom_of_window = $(window).scrollTop() + $(window).height();
+            
+            /* If the object is completely visible in the window, fade it it */
+            if( bottom_of_window > bottom_of_object ){
+                
+                $(this).animate({'opacity':'1'},500);
+                    
+            }
+            
+            }); 
+
+        });
+
+    }); 
+    </script>
+    
+    <div class="main_container">
+        
+        <ul class="navigation_trial">
+            <li><a class="home_link" href="../index.html"><img src="../img/home.png"></a></li>
+        </ul>
+            
+    </div>
+    
+    <div class="trial_container">
+    
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/109/three.min.js"></script>
+    <script src="https://rawgit.com/josephg/noisejs/master/perlin.js"></script>
+    
+    <script>
+    let width, 
+    height, 
+    scene, 
+    camera, 
+    renderer, 
+    geometry, 
+    material, 
+    icosahedron, 
+    ambientLight, 
+    lights;
+
+    width = window.innerWidth;
+    height = window.innerHeight;
+
+    function init(){
+      scene = new THREE.Scene();
+      scene.background = new THREE.Color(0xd3d3d3);
+
+      camera = new THREE.PerspectiveCamera(35, width / height, 1, 1000);
+      camera.position.set(0, 0, 5);
+      camera.lookAt(scene.position);
+
+      renderer = new THREE.WebGLRenderer({ antialias: true });
+      renderer.setPixelRatio(window.devicePixelRatio);
+      renderer.setClearColor('#1e272e', 1.0);
+      renderer.setSize(width, height);
+
+      // Geometry
+      geometry = new THREE.IcosahedronGeometry(1, 4);
+      material = new THREE.MeshStandardMaterial({ wireframe: false });
+      icosahedron = new THREE.Mesh(geometry, material);
+      icosahedron.name = 'Icosahedron';
+      scene.add(icosahedron);
+
+      // Lights
+      ambientLight = new THREE.HemisphereLight(0x111111, 0x000000, 15);
+      lights = new THREE.PointLight(0xd3d3d3, .6);
+      lights.position.set(0, 0, 3);
+      lights.castShadow = true;
+      scene.add(ambientLight);
+      scene.add(lights);
+        
+      ambientLight = new THREE.HemisphereLight(0x111111, 0x2E2C30, 5);
+      lights = new THREE.PointLight(0xd3d3d3, .6);
+      lights.position.set(0, 3, 0);
+      lights.castShadow = true;
+      scene.add(ambientLight);
+      scene.add(lights);
+
+      // Updating
+      const update = () => {
+        const time = performance.now() * 0.005;
+        //console.log(time);
+
+        const k = 2;
+        for (let i = 0; i < icosahedron.geometry.vertices.length; i++) {
+          const p = icosahedron.geometry.vertices[i];
+          p.normalize().multiplyScalar(1 + 0.1 * noise.perlin3(p.x * k + time, p.y * k, p.z * k));
+        }
+        icosahedron.geometry.computeVertexNormals();
+        icosahedron.geometry.normalSpeedUpdate = true;
+        icosahedron.geometry.verticesNeedUpdate = true;
+      };
+
+      // Window Resizing
+      window.onresize = function() {
+        renderer.setSize(window.innerWidth, window.innerHeight);
+        var aspectRatio = window.innerWidth / window.innerHeight;
+        camera.aspect = aspectRatio;
+        camera.updateProjectionMatrix();
+      };
+
+      // Rendering
+      const render = function() {
+        renderer.render(scene, camera);
+        icosahedron.rotation.x += 0.0001;
+        icosahedron.rotation.y += 0.0005;
+        update();
+        requestAnimationFrame(render);
+      };
+      render();
+      document.body.appendChild(renderer.domElement);
+    }
+
+    window.onload = init();
+    
+    </script> 
+        
+    </div>
+    
+    </body>

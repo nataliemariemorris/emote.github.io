@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="en">
+    
+<head>
+    
+    <meta name="viewport" content="width=device-width,initial-scale=1.0">
+    <meta charset="utf-8">
+    <title>Emote</title>
+    <link rel="stylesheet" href="css/main.css">
+    
+</head>  
+
+<body>
+    
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+    <script>
+    $(document).ready(function() {
+    
+    $(window).scroll( function(){
+    
+        $('p, h1, h2, a').each( function(i){
+    
+            var bottom_of_object = $(this).position().top + $(this).outerHeight() / 3;
+            var bottom_of_window = $(window).scrollTop() + $(window).height();
+            
+            /* If the object is completely visible in the window, fade it it */
+            if( bottom_of_window > bottom_of_object ){
+                
+                $(this).animate({'opacity':'1'},500);
+                    
+            }
+            
+            }); 
+
+        });
+
+    });
+    </script>
+
+    
+    <div class="main_container">
+        
+        <ul class="navigation">
+            <li><a class="home_link" href=""><img src="img/home.png"></a></li>
+            <li><a class="philosophy_link" href="#philosophy">PHILOSOPHY</a></li>
+            <li><a class="reviews_link" href="#reviews">REVIEWS</a></li>
+            <li><a class="plans_link" href="#plans">PLANS</a></li>
+            <li><a class="trial_link" href="#trial">INITIATE TRIAL</a></li>
+<!--            <li><a class="contact_link" href="#contact">CONTACT</a></li>-->
+        </ul>
+        
+<!--        <div class="line">
+            <hr style="border: none;">
+        </div>-->
+        
+        <div class="intro_container">
+            
+            <img class="logo" src="img/chromelogo.png" alt="Natalie Morris">
+            
+        </div>
+        
+        <div class="text_container">
+            
+            <a id="philosophy"></a>
+            <div class="philosophy_container">
+                    <h1>OUR VISION</h1>
+                    <p>At Emote, we believe in bringing the luxury of mental stability straight to you. <br><br> Our pleasure in providing optimized and personal therapy services to you through our artificial intelligence guides us toward the future of high class mental balance and sanity.</p> 
+            </div>
+                
+                <a id="reviews"></a>
+                <div class="review_container">
+                    <h1>THE LIVES WE'VE CHANGED</h1>
+                    <p style="width: 60%">"Before Emote, I really didn't know how to manage my stress. Now, I've realized how to prioritize what is important."<br>
+                    <h2>— Liberty, 20</h2>
+                        
+                    <br><br><p style="width: 60%">"This program changed my life. I feel like I finally understand how to be happy again!" <br></p>
+                    <h2>— Saul, 45</h2>
+                    
+                    <br><br><p style="margin-left: 35%; width: 60%">"I needed a refresher and find a way to relax. Emote gave me exactly what I needed. Emote's intelligence feels organic, real, and knows me better than anyone."</p> 
+                    <h2 style="margin-left: 35%; width: 60%">— Marina, 32</h2>
+                    
+                    <p style="margin-left: 35%; width: 60%"><br>"Emote is moving healthcare in the right direction. I know I am getting the high-quality, exclusive care that I deserve." <br></p> 
+                    <h2 style="margin-left: 35%; width: 60%">— Mark, 60</h2>
+            </div>
+            
+            <div class="plans_parent">
+                
+                <a id="plans"></a>
+                
+                <div class="plans_container">
+                    <h1>LET'S WORK TOGETHER</h1>
+    
+                    <div class="plan">
+                       <p style="font-family: 'suisse-medium">STANDARD</p>
+                        <h2>$300-$500</h2><h2 style= "font-size: 10px; font-family: 'suisse-medium'; letter-spacing: 1px;"> per session</h2>
+                        <p style="font-size: 1.3vw"><br>Our standard plan offers you access to our personalized AI services with weekly sessions up to one year without down payment renewal.
+
+                        <br><br>Topics available for discussion with your therapist will include stress, anxiety, depression, and some subjects related to trauma. For more information, take the optimization trial to see if this plan will cover the topics you would like to discuss. </p>
+                    </div>
+                    <div class="plan">
+                        <p style="font-family: 'suisse-medium">DELUXE</p>
+                        <h2>$500-$1,000<br></h2><h2 style= "font-size: 10px; font-family: 'suisse-medium'; letter-spacing: 1px;"> per session</h2>
+                        <p style="font-size: 1.3vw"><br>Our deluxe plan upgrades you from the standard plan to unlock new features included with the standard access to our personalized AI services with weekly sessions up to one year without down payment renewal.
+
+                        <br><br>Topics available for discussion with your therapist will include stress, anxiety, depression, and subjects related to trauma such as symptoms of post traumatic stress disorder and the unpacking of childhood trauma. For more information, take the optimization trial to see if this plan will cover the topics you would like to discuss.  </p>
+                    </div>
+                    <div class="plan">
+                        <p style="font-family: 'suisse-medium">PREMIUM</p>
+                        <h2>$1,000+<br></h2><h2 style= "font-size: 10px; font-family: 'suisse-medium'; letter-spacing: 1px;"> per session</h2>
+                        <p style="font-size: 1.3vw"><br>Our premium plan upgrades you full access to our services, including the standard access to our personalized AI services with weekly sessions up to one year without down payment renewal.
+
+                        <br><br>With deluxe access, clients are able to access all personal topics with our specialized AI therapists. You will also be able to receive a certified diagnosis. Our deluxe plan offers the best route for patients looking to receive medication or further mental health treatment. This plan offers a complimentary service to pair you with a psychiatrist that has been approved by Emote's high-class standards. Take the optimization trial to see if this plan works best for you.</p>
+                    </div>
+
+                </div>
+                
+            </div>
+            
+            <a id="trial"></a>
+            <div class="trial_launch_container">
+                
+                <h1>OPTIMIZE YOUR EXPERIENCE</h1>
+                
+                <div class="launch_link_container">
+                    <a class="launch_link" href="trial/trial.html">Launch the trial.</a>
+                </div>
+            
+            </div>
+            
+<!--            <a id="contact"></a>
+            <div class="contact_container">
+            
+                <h1>GET TO KNOW US</h1>
+                <p></p>
+                
+            </div>-->
+            
+        </div>
+        
+    </div>
+    
+</body>
