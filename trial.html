@@ -14,7 +14,518 @@
     
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
     <script>
-    $(document).ready(function() {
+        
+    var question1 = true;
+    var question2 = false;
+    var question3 = false;
+    var question4 = false;
+    var question5 = false;
+    var question6 = false;
+    var question7 = false;
+    var answer1 = false;
+    var answer2 = false;
+    var answer3 = false; 
+    var answer1_result = 0;
+    var answer2_result = 0;
+    var answer3_result = 0;
+        
+    var audio1 = new Audio();
+    audio1.src = "../audio/audio1.mp3"; 
+        
+    var audio2 = new Audio();
+    audio2.src = "../audio/audio2.mp3"; 
+        
+    var audio3 = new Audio();
+    audio3.src = "../audio/audio3.mp3"; 
+        
+    var audio4 = new Audio();
+    audio4.src = "../audio/audio4.mp3"; 
+        
+    var audio5 = new Audio();
+    audio5.src = "../audio/audio5.mp3"; 
+        
+    var audio6 = new Audio();
+    audio6.src = "../audio/audio6.mp3"; 
+        
+    var audio7 = new Audio();
+    audio7.src = "../audio/audio7.mp3"; 
+        
+    var answer1 = new Audio();
+    answer1.src = "../audio/answer1.mp3"; 
+        
+    var answer2 = new Audio();
+    answer2.src = "../audio/answer2.mp3"; 
+        
+    var answer3 = new Audio();
+    answer3.src = "../audio/answer3.mp3"; 
+        
+        
+    // introduction audio clicked
+    $(function() {
+        $("#introaudio").click(function() {
+            $("#introaudio_cc").toggleClass("show");
+            $("#audio1_answer1").toggleClass("show");
+            $("#audio1_answer2").toggleClass("show");
+            $("#audio1_answer3").toggleClass("show");
+            $("#audio1_answer4").toggleClass("show");
+            $("#introaudio").toggleClass("hide");
+        });
+    });
+      
+    // first question
+    $(function() {
+        $("#audio1_answer1").click(function() {
+            $("#audio1_play").toggleClass("hide");
+            $("#audio_text2").toggleClass("show");
+            $("#audio2_cc").toggleClass("show");
+            $("#audio2_answer1").toggleClass("show");
+            $("#audio2_answer2").toggleClass("show");
+            $("#audio2_answer3").toggleClass("show");
+            $("#audio2_answer4").toggleClass("show");
+        });
+    });
+        
+    $(function() {
+        $("#audio1_answer2").click(function() {
+            $("#audio1_play").toggleClass("hide");
+            $("#audio_text2").toggleClass("show");
+            $("#audio2_cc").toggleClass("show");
+            $("#audio2_answer1").toggleClass("show");
+            $("#audio2_answer2").toggleClass("show");
+            $("#audio2_answer3").toggleClass("show");
+            $("#audio2_answer4").toggleClass("show");
+        });
+    });
+        
+    $(function() {
+        $("#audio1_answer3").click(function() {
+            $("#audio1_play").toggleClass("hide");
+            $("#audio_text2").toggleClass("show");
+            $("#audio2_cc").toggleClass("show");
+            $("#audio2_answer1").toggleClass("show");
+            $("#audio2_answer2").toggleClass("show");
+            $("#audio2_answer3").toggleClass("show");
+            $("#audio2_answer4").toggleClass("show");
+        });
+    });
+        
+    $(function() {
+        $("#audio1_answer4").click(function() {
+            $("#audio1_play").toggleClass("hide");
+            $("#audio_text2").toggleClass("show");
+            $("#audio2_cc").toggleClass("show");
+            $("#audio2_answer1").toggleClass("show");
+            $("#audio2_answer2").toggleClass("show");
+            $("#audio2_answer3").toggleClass("show");
+            $("#audio2_answer4").toggleClass("show");
+        });
+    });
+    
+    // second question
+    $(function() {
+        $("#audio2_answer1").click(function() {
+            $("#audio2_play").toggleClass("hide");
+            $("#audio_text3").toggleClass("show");
+            $("#audio3_cc").toggleClass("show");
+            $("#audio3_answer1").toggleClass("show");
+            $("#audio3_answer2").toggleClass("show");
+            $("#audio3_answer3").toggleClass("show");
+            $("#audio3_answer4").toggleClass("show");
+        });
+    });
+        
+    $(function() {
+        $("#audio2_answer2").click(function() {
+            $("#audio2_play").toggleClass("hide");
+            $("#audio_text3").toggleClass("show");
+            $("#audio3_cc").toggleClass("show");
+            $("#audio3_answer1").toggleClass("show");
+            $("#audio3_answer2").toggleClass("show");
+            $("#audio3_answer3").toggleClass("show");
+            $("#audio3_answer4").toggleClass("show");
+        });
+    });
+        
+    $(function() {
+        $("#audio2_answer3").click(function() {
+            $("#audio2_play").toggleClass("hide");
+            $("#audio_text3").toggleClass("show");
+            $("#audio3_cc").toggleClass("show");
+            $("#audio3_answer1").toggleClass("show");
+            $("#audio3_answer2").toggleClass("show");
+            $("#audio3_answer3").toggleClass("show");
+            $("#audio3_answer4").toggleClass("show");
+        });
+    });
+        
+    $(function() {
+        $("#audio2_answer4").click(function() {
+            $("#audio2_play").toggleClass("hide");
+            $("#audio_text3").toggleClass("show");
+            $("#audio3_cc").toggleClass("show");
+            $("#audio3_answer1").toggleClass("show");
+            $("#audio3_answer2").toggleClass("show");
+            $("#audio3_answer3").toggleClass("show");
+            $("#audio3_answer4").toggleClass("show");
+        });
+    });
+        
+    // third question
+    $(function() {
+        $("#audio3_answer1").click(function() {
+            $("#audio3_play").toggleClass("hide");
+            $("#audio_text4").toggleClass("show");
+            $("#audio4_cc").toggleClass("show");
+            $("#audio4_answer1").toggleClass("show");
+            $("#audio4_answer2").toggleClass("show");
+            $("#audio4_answer3").toggleClass("show");
+            $("#audio4_answer4").toggleClass("show");
+        });
+    });
+        
+    $(function() {
+        $("#audio3_answer2").click(function() {
+            $("#audio3_play").toggleClass("hide");
+            $("#audio_text4").toggleClass("show");
+            $("#audio4_cc").toggleClass("show");
+            $("#audio4_answer1").toggleClass("show");
+            $("#audio4_answer2").toggleClass("show");
+            $("#audio4_answer3").toggleClass("show");
+            $("#audio4_answer4").toggleClass("show");
+        });
+    });
+        
+    $(function() {
+        $("#audio3_answer3").click(function() {
+            $("#audio3_play").toggleClass("hide");
+            $("#audio_text4").toggleClass("show");
+            $("#audio4_cc").toggleClass("show");
+            $("#audio4_answer1").toggleClass("show");
+            $("#audio4_answer2").toggleClass("show");
+            $("#audio4_answer3").toggleClass("show");
+            $("#audio4_answer4").toggleClass("show");
+        });
+    });
+        
+    $(function() {
+        $("#audio3_answer4").click(function() {
+            $("#audio3_play").toggleClass("hide");
+            $("#audio_text4").toggleClass("show");
+            $("#audio4_cc").toggleClass("show");
+            $("#audio4_answer1").toggleClass("show");
+            $("#audio4_answer2").toggleClass("show");
+            $("#audio4_answer3").toggleClass("show");
+            $("#audio4_answer4").toggleClass("show");
+        });
+    });
+        
+    // fourth question
+    $(function() {
+        $("#audio4_answer1").click(function() {
+            answer1_result = answer1_result + 1;
+            $("#audio4_play").toggleClass("hide");
+            $("#audio_text5").toggleClass("show");
+            $("#audio5_cc").toggleClass("show");
+            $("#audio5_answer1").toggleClass("show");
+            $("#audio5_answer2").toggleClass("show");
+            $("#audio5_answer3").toggleClass("show");
+            $("#audio5_answer4").toggleClass("show");
+        });
+    });
+        
+    $(function() {
+        $("#audio4_answer2").click(function() {
+            answer1_result = answer1_result + 1;
+            $("#audio4_play").toggleClass("hide");
+            $("#audio_text5").toggleClass("show");
+            $("#audio5_cc").toggleClass("show");
+            $("#audio5_answer1").toggleClass("show");
+            $("#audio5_answer2").toggleClass("show");
+            $("#audio5_answer3").toggleClass("show");
+            $("#audio5_answer4").toggleClass("show");
+        });
+    });
+        
+    $(function() {
+        $("#audio4_answer3").click(function() {
+            answer2_result = answer2_result + 1;
+            $("#audio4_play").toggleClass("hide");
+            $("#audio_text5").toggleClass("show");
+            $("#audio5_cc").toggleClass("show");
+            $("#audio5_answer1").toggleClass("show");
+            $("#audio5_answer2").toggleClass("show");
+            $("#audio5_answer3").toggleClass("show");
+            $("#audio5_answer4").toggleClass("show");
+        });
+    });
+        
+    $(function() {
+        $("#audio4_answer4").click(function() {
+            answer3_result = answer3_result + 1;
+            $("#audio4_play").toggleClass("hide");
+            $("#audio_text5").toggleClass("show");
+            $("#audio5_cc").toggleClass("show");
+            $("#audio5_answer1").toggleClass("show");
+            $("#audio5_answer2").toggleClass("show");
+            $("#audio5_answer3").toggleClass("show");
+            $("#audio5_answer4").toggleClass("show");
+        });
+    });
+        
+    // fifth question
+    $(function() {
+        $("#audio5_answer1").click(function() {
+            answer1_result = answer1_result + 1;
+            $("#audio5_play").toggleClass("hide");
+            $("#audio_text6").toggleClass("show");
+            $("#audio6_cc").toggleClass("show");
+            $("#audio6_answer1").toggleClass("show");
+            $("#audio6_answer2").toggleClass("show");
+            $("#audio6_answer3").toggleClass("show");
+            $("#audio6_answer4").toggleClass("show");
+        });
+    });
+        
+    $(function() {
+        $("#audio5_answer2").click(function() {
+            answer2_result = answer2_result + 1;
+            $("#audio5_play").toggleClass("hide");
+            $("#audio_text6").toggleClass("show");
+            $("#audio6_cc").toggleClass("show");
+            $("#audio6_answer1").toggleClass("show");
+            $("#audio6_answer2").toggleClass("show");
+            $("#audio6_answer3").toggleClass("show");
+            $("#audio6_answer4").toggleClass("show");
+        });
+    });
+        
+    $(function() {
+        $("#audio5_answer3").click(function() {
+            answer2_result = answer2_result + 1;
+            $("#audio5_play").toggleClass("hide");
+            $("#audio_text6").toggleClass("show");
+            $("#audio6_cc").toggleClass("show");
+            $("#audio6_answer1").toggleClass("show");
+            $("#audio6_answer2").toggleClass("show");
+            $("#audio6_answer3").toggleClass("show");
+            $("#audio6_answer4").toggleClass("show");
+        });
+    });
+        
+    $(function() {
+        $("#audio5_answer4").click(function() {
+            answer3_result = answer3_result + 1;
+            $("#audio5_play").toggleClass("hide");
+            $("#audio_text6").toggleClass("show");
+            $("#audio6_cc").toggleClass("show");
+            $("#audio6_answer1").toggleClass("show");
+            $("#audio6_answer2").toggleClass("show");
+            $("#audio6_answer3").toggleClass("show");
+            $("#audio6_answer4").toggleClass("show");
+        });
+    });
+        
+    // sixth question
+    $(function() {
+        $("#audio6_answer1").click(function() {
+            answer1_result = answer1_result + 1;
+            $("#audio6_play").toggleClass("hide");
+            $("#audio_text7").toggleClass("show");
+            $("#audio7_cc").toggleClass("show");
+            $("#audio7_answer1").toggleClass("show");
+            $("#audio7_answer2").toggleClass("show");
+            $("#audio7_answer3").toggleClass("show");
+            $("#audio7_answer4").toggleClass("show");
+        });
+    });
+        
+    $(function() {
+        $("#audio6_answer2").click(function() {
+            answer1_result = answer1_result + 1;
+            $("#audio6_play").toggleClass("hide");
+            $("#audio_text7").toggleClass("show");
+            $("#audio7_cc").toggleClass("show");
+            $("#audio7_answer1").toggleClass("show");
+            $("#audio7_answer2").toggleClass("show");
+            $("#audio7_answer3").toggleClass("show");
+            $("#audio7_answer4").toggleClass("show");
+        });
+    });
+        
+    $(function() {
+        $("#audio6_answer3").click(function() {
+            answer2_result = answer2_result + 1;
+            $("#audio6_play").toggleClass("hide");
+            $("#audio_text7").toggleClass("show");
+            $("#audio7_cc").toggleClass("show");
+            $("#audio7_answer1").toggleClass("show");
+            $("#audio7_answer2").toggleClass("show");
+            $("#audio7_answer3").toggleClass("show");
+            $("#audio7_answer4").toggleClass("show");
+        });
+    });
+        
+    $(function() {
+        $("#audio6_answer4").click(function() {
+            answer3_result = answer3_result + 1;
+            $("#audio6_play").toggleClass("hide");
+            $("#audio_text7").toggleClass("show");
+            $("#audio7_cc").toggleClass("show");
+            $("#audio7_answer1").toggleClass("show");
+            $("#audio7_answer2").toggleClass("show");
+            $("#audio7_answer3").toggleClass("show");
+            $("#audio7_answer4").toggleClass("show");
+        });
+    });
+        
+    // seventh question answer 1
+    $(function() {
+        $("#audio7_answer1").click(function() {
+            answer1_result = answer1_result + 1;
+            
+            // display answer 1
+            if( answer1_result > answer2_result ) {
+                answer1.play();
+                $("#audio7_play").toggleClass("hide");
+                $("#answer1_cc").toggleClass("show");
+                $("#answer1_learnmore_link").toggleClass("show");
+            }
+            else if ( answer1_result > answer3_result ) {
+                answer1.play();
+                $("#audio7_play").toggleClass("hide");
+                $("#answer1_cc").toggleClass("show");
+                $("#answer1_learnmore_link").toggleClass("show");
+            }
+            
+            // display answer 2
+            if( answer2_result > answer1_result ) {
+                answer2.play();
+                $("#audio7_play").toggleClass("hide");
+                $("#answer2_cc").toggleClass("show");
+                $("#answer2_learnmore_link").toggleClass("show");
+            }
+            else if ( answer2_result > answer3_result ) {
+                answer2.play();
+                $("#audio7_play").toggleClass("hide");
+                $("#answer2_cc").toggleClass("show");
+                $("#answer2_learnmore_link").toggleClass("show");
+            }
+            
+            // display answer 3
+            if( answer3_result > answer1_result ) {
+                answer3.play();
+                $("#audio7_play").toggleClass("hide");
+                $("#answer3_cc").toggleClass("show");
+                $("#answer3_learnmore_link").toggleClass("show");
+            }
+            else if ( answer3_result > answer2_result ) {
+                answer3.play();
+                $("#audio7_play").toggleClass("hide");
+                $("#answer3_cc").toggleClass("show");
+                $("#answer3_learnmore_link").toggleClass("show");
+            }
+        });
+    });
+        
+    // seventh question answer 2
+    $(function() {
+        $("#audio7_answer2").click(function() {
+            answer2_result = answer2_result + 1;
+            
+            // display answer 1
+            if( answer1_result > answer2_result ) {
+                answer1.play();
+                $("#audio7_play").toggleClass("hide");
+                $("#answer1_cc").toggleClass("show");
+                $("#answer1_learnmore_link").toggleClass("show");
+            }
+            else if ( answer1_result > answer3_result ) {
+                answer1.play();
+                $("#audio7_play").toggleClass("hide");
+                $("#answer1_cc").toggleClass("show");
+                $("#answer1_learnmore_link").toggleClass("show");
+            }
+            
+            // display answer 2
+            if( answer2_result > answer1_result ) {
+                answer2.play();
+                $("#audio7_play").toggleClass("hide");
+                $("#answer2_cc").toggleClass("show");
+                $("#answer2_learnmore_link").toggleClass("show");
+            }
+            else if ( answer2_result > answer3_result ) {
+                answer2.play();
+                $("#audio7_play").toggleClass("hide");
+                $("#answer2_cc").toggleClass("show");
+                $("#answer2_learnmore_link").toggleClass("show");
+            }
+            
+            // display answer 3
+            if( answer3_result > answer1_result ) {
+                answer3.play();
+                $("#audio7_play").toggleClass("hide");
+                $("#answer3_cc").toggleClass("show");
+                $("#answer3_learnmore_link").toggleClass("show");
+            }
+            else if ( answer3_result > answer2_result ) {
+                answer3.play();
+                $("#audio7_play").toggleClass("hide");
+                $("#answer3_cc").toggleClass("show");
+                $("#answer3_learnmore_link").toggleClass("show");
+            }
+        });
+    });
+        
+    // seventh question answer 3
+    $(function() {
+        $("#audio7_answer3").click(function() {
+            answer3_result = answer3_result + 1;
+            
+            // display answer 1
+            if( answer1_result > answer2_result ) {
+                answer1.play();
+                $("#audio7_play").toggleClass("hide");
+                $("#answer1_cc").toggleClass("show");
+                $("#answer1_learnmore_link").toggleClass("show");
+            }
+            else if ( answer1_result > answer3_result ) {
+                answer1.play();
+                $("#audio7_play").toggleClass("hide");
+                $("#answer1_cc").toggleClass("show");
+                $("#answer1_learnmore_link").toggleClass("show");
+            }
+            
+            // display answer 2
+            if( answer2_result > answer1_result ) {
+                answer2.play();
+                $("#audio7_play").toggleClass("hide");
+                $("#answer2_cc").toggleClass("show");
+                $("#answer2_learnmore_link").toggleClass("show");
+            }
+            else if ( answer2_result > answer3_result ) {
+                answer2.play();
+                $("#audio7_play").toggleClass("hide");
+                $("#answer2_cc").toggleClass("show");
+                $("#answer2_learnmore_link").toggleClass("show");
+            }
+            
+            // display answer 3
+            if( answer3_result > answer1_result ) {
+                answer3.play();
+                $("#audio7_play").toggleClass("hide");
+                $("#answer3_cc").toggleClass("show");
+                $("#answer3_learnmore_link").toggleClass("show");
+            }
+            else if ( answer3_result > answer2_result ) {
+                answer3.play();
+                $("#audio7_play").toggleClass("hide");
+                $("#answer3_cc").toggleClass("show");
+                $("#answer3_learnmore_link").toggleClass("show");
+            }
+        });
+    });
+        
+    $(document).ready(function() {    
     
     $(window).scroll( function(){
     
@@ -40,9 +551,146 @@
     <div class="main_container">
         
         <ul class="navigation_trial">
-            <li><a class="home_link" href="../"><img src="../img/home.png"></a></li>
+            <li><a class="home_link" href="../index.html"><img src="../img/home.png"></a></li>
         </ul>
             
+    </div>
+    
+    <div class="trial_text_container">
+        <div id="intro_play">
+            <a id="introaudio" href="#" onclick="audio1.play()">Start</a>
+        </div>
+        
+        <div id="audio1_play">
+            <div class="audio_text1">
+                <div class="audio_text_cc">
+                    <a id="introaudio_cc" class="hide"><br>Welcome to the Optimization Trial. Please, make yourself comfortable. My name is Emote, and I will be your personal therapist for this session. Let’s begin with answering some simple questions. Why are you here today?</a>
+                </div>
+                <div class="audio1_answers_text">
+                    <a id="audio1_answer1" href="#" class="hide" onclick="audio2.play()"> <br>— I am experiencing elevated levels of stress or anxiety.</a>
+                    <a id="audio1_answer2" href="#" class="hide" onclick="audio2.play()">— I am experiencing a lack of energy, excitement, motivation, or happiness.</a>
+                    <a id="audio1_answer3" href="#" class="hide" onclick="audio2.play()">— I am experiencing a mix of these things.</a>
+                    <a id="audio1_answer4" href="#" class="hide" onclick="audio2.play()">— I am not experiencing these issues, but still interested in seeking treatment.</a>
+                </div>
+            </div>
+        </div>
+        
+        <div id="audio2_play">
+            <div class="audio_text2">
+                <div class="audio_text_cc">
+                    <a id="audio2_cc" class="hide"><br>Are you experiencing any of the following issues in your relationships?</a>
+                </div>
+                <div class="audio2_answers_text">
+                    <a id="audio2_answer1" href="#" class="hide" onclick="audio3.play()"> <br>—  I am experiencing feelings of loneliness or an inability to connect with those around me.</a>
+                    <a id="audio2_answer2" href="#" class="hide" onclick="audio3.play()">— I believe I am being mistreated by someone within my social circle, or an anonymous source.</a>
+                    <a id="audio2_answer3" href="#" class="hide" onclick="audio3.play()">— I am experiencing relationship troubles or interpersonal conflict with at least one person that I might consider a friend, a significant other, family, coworkers, or anyone else I consider myself particularly close with.</a>
+                    <a id="audio2_answer4" href="#" class="hide" onclick="audio3.play()">— I am not experiencing any of the following issues.</a>
+                </div>
+            </div>
+        </div>
+        
+        <div id="audio3_play">
+            <div class="audio_text3">
+                <div class="audio_text_cc">
+                    <a id="audio3_cc" class="hide"><br>Have you experienced any of the following physical symptoms within your daily life to an unpleasant degree?</a>
+                </div>
+                <div class="audio3_answers_text">
+                    <a id="audio3_answer1" href="#" class="hide" onclick="audio4.play()"> <br>—  Shortness of breath, tightness of the chest, nervous energy, shakiness, or racing heartbeat.</a>
+                    <a id="audio3_answer2" href="#" class="hide" onclick="audio4.play()">— Excessive amount of fatigue or sleepiness, troubles with appetite, lack of energy, or sluggishness.</a>
+                    <a id="audio3_answer3" href="#" class="hide" onclick="audio4.play()">— I am experiencing a mix of these things.</a>
+                    <a id="audio3_answer4" href="#" class="hide" onclick="audio4.play()">— I am not experiencing any of the following issues.</a>
+                </div>
+            </div>
+        </div>
+        
+        <div id="audio4_play">
+            <div class="audio_text4">
+                <div class="audio_text_cc">
+                    <a id="audio4_cc" class="hide"><br>Do you spend most of your time working or studying? Are you in the financial situation to stop?</a>
+                </div>
+                <div class="audio4_answers_text">
+                    <a id="audio4_answer1" href="#" class="hide" onclick="audio5.play()"> <br>—  I spend most of my time working and studying because I am financially or circumstantially bound to it.</a>
+                    <a id="audio4_answer2" href="#" class="hide" onclick="audio5.play()">— I am financially or circumstantially bound to working or studying, however, I do not spend most of my time preoccupied with these things.</a>
+                    <a id="audio4_answer3" href="#" class="hide" onclick="audio5.play()">— I feel pressure to work or study, however, if I really wanted to, I could stop for the sake of my mental health.</a>
+                    <a id="audio4_answer4" href="#" class="hide" onclick="audio5.play()">— I don’t spend most of my time working or studying and I am not financially or circumstantially bound to that lifestyle.</a>
+                </div>
+            </div>
+        </div>
+        
+        <div id="audio5_play">
+            <div class="audio_text5">
+                <div class="audio_text_cc">
+                    <a id="audio5_cc" class="hide"><br>If the solution to your problems, hypothetically, were to leave your current responsibilities behind for the sake of your mental health… would you be able to afford to do this?</a>
+                </div>
+                <div class="audio5_answers_text">
+                    <a id="audio5_answer1" href="#" class="hide" onclick="audio6.play()"> <br>—  No, I would not be able to do this, and even if I could, I have to fulfill these responsibilities due to other circumstances.</a>
+                    <a id="audio5_answer2" href="#" class="hide" onclick="audio6.play()">— No, I would not be able to do this, but if I could afford it, I would do so.</a>
+                    <a id="audio5_answer3" href="#" class="hide" onclick="audio6.play()">— I could afford to do this, but I have to fulfill these responsibilities due to other circumstances.</a>
+                    <a id="audio5_answer4" href="#" class="hide" onclick="audio6.play()">— I could afford to do this and would be willing to do so.</a>
+                </div>
+            </div>
+        </div>
+        
+        <div id="audio6_play">
+            <div class="audio_text6">
+                <div class="audio_text_cc">
+                    <a id="audio6_cc" class="hide"><br>Roughly, how much money do you or your primary income provider make a year?</a>
+                </div>
+                <div class="audio6_answers_text">
+                    <a id="audio6_answer1" href="#" class="hide" onclick="audio7.play()"> <br>—  Under $40,000</a>
+                    <a id="audio6_answer2" href="#" class="hide" onclick="audio7.play()">— Between $40,000 and $120,000</a>
+                    <a id="audio6_answer3" href="#" class="hide" onclick="audio7.play()">— Above $120,000</a>
+                    <a id="audio6_answer4" href="#" class="hide" onclick="audio7.play()">— Significantly above all these numbers.</a>
+                </div>
+            </div>
+        </div>
+        
+        <div id="audio7_play">
+            <div class="audio_text7">
+                <div class="audio_text_cc">
+                    <a id="audio7_cc" class="hide"><br>If you could not afford our services, would you be willing to pay by other means such as consenting to sell your organs to us after your death, or participating in our house mortgage payment plan? You can learn more about these plans when the trial has finished.</a>
+                </div>
+                <div class="audio7_answers_text">
+                    <a id="audio7_answer1" href="#" class="hide" onclick=""> <br>—  I would not be willing to look into these payment plans.</a>
+                    <a id="audio7_answer2" href="#" class="hide" onclick="">— I would be willing to look into these payment plans.</a>
+                    <a id="audio7_answer3" href="#" class="hide" onclick="">— I can afford Emote’s services.</a>
+                </div>
+            </div>
+        </div>
+        
+        <div id="answer1_play">
+            <div class="audio_text_answer1">
+                <div class="audio_text_cc">
+                    <a id="answer1_cc" class="hide"><br>According to your trial results, you are not a suitable candidate for Emote's services. We cater our mental stability plan to those who have the financial circumstances to take breaks from school or work. We would recommend a client like you to opt into our home mortgage life program, or our organ donor trade program, to be able to use these services. Thank you for your time.</a>
+                </div>
+                <div class="answer1_learnmore">
+                    <a id="answer1_learnmore_link" href="#" class="hide"> <br>Learn more about our programs.</a>
+                </div>
+            </div>
+        </div>
+        
+        <div id="answer2_play">
+            <div class="audio_text_answer2">
+                <div class="audio_text_cc">
+                    <a id="answer2_cc" class="hide"><br>According to our trial results, you might be eligible for our standard plan, however, we are unsure if you would be a fit candidate for our services. We cater our mental stability plan to those who have the financial circumstances to take breaks from school or work. However, a client like you might be interested in our home mortgage life program or organ donor trade program to afford our services! Thank you for your time.</a>
+                </div>
+                <div class="answer2_learnmore">
+                    <a id="answer2_learnmore_link" href="#" class="hide"> <br>Learn more about our programs.</a>
+                </div>
+            </div>
+        </div>
+        
+        <div id="answer3_play">
+            <div class="audio_text_answer3">
+                <div class="audio_text_cc">
+                    <a id="answer3_cc" class="hide"><br>According to our trial results, you are likely to be eligible for our services! We cater our mental stability plan to those who have the financial circumstances to take breaks from school or work, which you seem able to do. However, in order to guarantee full access our highly recommended premium plan, we would suggest looking into our home mortgage life program or our organ donor trade program! Thank you for your time.</a>
+                </div>
+                <div class="answer3_learnmore">
+                    <a id="answer3_learnmore_link" href="#" class="hide"> <br>Learn more about our programs.</a>
+                </div>
+            </div>
+        </div>
+        
     </div>
     
     <div class="trial_container">
