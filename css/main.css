@@ -292,6 +292,62 @@ p, h1, h2 {
     margin: 0;
 }
 
+.programs_parent {
+    background: rgb(211,211,211);
+    background: linear-gradient(0deg, rgba(211,211,211,1) 0%, rgba(255,255,255,1) 31%);
+    height: 100vh;
+}
+
+.programs_container {
+    text-align: center;
+    margin-left: auto;
+    margin-right: auto;
+    margin-left: 90px;
+    margin-right: 90px;
+    padding-bottom: 100px;
+}
+
+.programs_container:after {
+    content: "";
+    display: table;
+    clear: both;
+}
+
+.program {
+    float: left;
+    width: 50%;
+}
+
+.program p {
+    font-family: 'suisse-light';
+    font-size: 2vw;
+    text-align: left;
+    padding-right: 50px;
+}
+
+.program h2 {
+    font-size: 3.2vw;
+    font-family: 'sometimestimes-italic';
+    text-align: left;
+}
+
+.programs_container h1 {
+    text-align: center;
+    padding-top: 8%;
+    padding-bottom: 50px;
+    font-family: 'suisse-medium';
+    font-size: 10px;
+    letter-spacing: 1px;
+    color: rgb(0, 0, 0);
+    margin: 0;
+}
+
+.programs_parent p, h1, h2, a {
+    opacity: 100;
+}
+
+
+
 .trial_container {
     background-color: rgb(211,211,211);
 }
