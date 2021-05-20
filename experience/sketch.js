@@ -249,7 +249,7 @@ websiteButtonOnOutside = function() {
 }
 
 websiteButtonPressed = function() {
-	//window.open("../");
+	window.open("../");
 
   disclaimerPrompt = true;
 }
