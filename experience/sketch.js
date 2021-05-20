@@ -37,11 +37,10 @@ function setup() {
 
 	//emoteSplash = createVideo(['img/emotesplash.mov']);
 	//emoteSplash.loop();
+  emotePicture = emote;
 
- 	emoteWidth = emote.width/2.2;
- 	emoteHeight = emote.height/2.2;
-
- 	emotePicture = emote;
+  emoteWidth = emote.width;
+  emoteHeight = emote.height;
  }
 
  function preload() {
@@ -59,6 +58,7 @@ function setup() {
 
 function draw() {
   background(0);
+
   image(emotePicture, width/2, height/2, emoteWidth, emoteHeight);
 
   computerButton.locate(width/2, height/2 + emoteHeight/15);
@@ -138,16 +138,16 @@ function draw() {
   }
 
   if (windowWidth < 950) {
-  	emoteWidth = emote.width/3.3;
-  	emoteHeight = emote.height/3.3;
+  	emoteWidth = emote.width/1.5;
+  	emoteHeight = emote.height/1.5;
   }
   if (windowWidth < 620) {
-  	emoteWidth = emote.width/4.5;
-  	emoteHeight = emote.height/4.5;
+  	emoteWidth = emote.width/2;
+  	emoteHeight = emote.height/2;
   }
   if (windowWidth > 950) {
-  	emoteWidth = emote.width/2.2;
-  	emoteHeight = emote.height/2.2;
+  	emoteWidth = emote.width;
+  	emoteHeight = emote.height;
   }
 }
 
