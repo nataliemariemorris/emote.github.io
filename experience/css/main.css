@@ -320,11 +320,11 @@ h1, h2, p, a {
 
 @media screen and (max-width: 800px) {
     .navigation a {
-        padding: 1px;
+        padding: 0px;
     }
     
     .navigation {
-        padding: 0;
+        padding: 0px;
         padding-left: 10px;
         padding-top: 10px;
     }
