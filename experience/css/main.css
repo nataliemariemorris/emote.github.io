@@ -301,14 +301,14 @@ h1, h2, p, a {
 
 .col_innerleft {
   height: 100%;
-  width: 100%;
+  width: 50vw;
   overflow-y: scroll;
   box-sizing: content-box;
 }
 
 .col_innerright {
   height: 100%;
-  width: 100%;
+  width: 50vw;
   overflow-y: scroll;
   box-sizing: content-box;
     background: black;
