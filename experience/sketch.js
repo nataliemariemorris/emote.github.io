@@ -142,8 +142,8 @@ function draw() {
   	emoteHeight = emote.height/1.5;
   }
   if (windowWidth < 620) {
-  	emoteWidth = emote.width/2;
-  	emoteHeight = emote.height/2;
+  	emoteWidth = emote.width/2.5;
+  	emoteHeight = emote.height/2.5;
   }
   if (windowWidth > 950) {
   	emoteWidth = emote.width;
