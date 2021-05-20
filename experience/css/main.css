@@ -319,6 +319,16 @@ h1, h2, p, a {
 }
 
 @media screen and (max-width: 800px) {
+    .navigation a {
+        padding: 1px;
+    }
+    
+    .navigation {
+        padding: 0;
+        padding-left: 10px;
+        padding-top: 10px;
+    }
+    
     .about_container p {
         font-size: 15px;
     }
@@ -389,5 +399,6 @@ h1, h2, p, a {
         box-sizing: inherit;
         display: block;
         overflow: auto;
+        width: 100vw;
     }
 }
