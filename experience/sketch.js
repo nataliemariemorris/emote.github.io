@@ -13,6 +13,9 @@ var emoteTV;
 var emoteCards;
 var emoteSplash;
 var emoteScreen;
+var disclaimer;
+var disclaimerPrompt = false;
+var timer = 0;
 
 // Clickables
 var arrow;
@@ -54,6 +57,7 @@ function setup() {
  	emotePosters = loadImage("img/emoteposters.jpg");
  	emoteTV = loadImage("img/emotetv.jpg");
  	emoteCards = loadImage("img/emote3.jpg");
+  disclaimer = loadImage("img/disclaimer.png");
  }
 
 function draw() {
@@ -149,6 +153,18 @@ function draw() {
   	emoteWidth = emote.width;
   	emoteHeight = emote.height;
   }
+
+  if ((windowWidth < 620) && (disclaimerPrompt)) {
+    image(disclaimer, width/2, height/2);
+  }
+
+  if (disclaimerPrompt === true) {
+    timer = timer + 1;
+    if (timer > 200) {
+      disclaimerPrompt = false;
+      timer = 0;
+    }
+  }
 }
 
 function windowResized() {
@@ -233,7 +249,9 @@ websiteButtonOnOutside = function() {
 }
 
 websiteButtonPressed = function() {
-	window.open("../");
+	//window.open("../");
+
+  disclaimerPrompt = true;
 }
 
 cardsButtonHover = function() {
