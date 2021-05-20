@@ -155,7 +155,7 @@ function draw() {
   }
 
   if ((windowWidth < 620) && (disclaimerPrompt)) {
-    image(disclaimer, width/2, height/2, disclaimer.width/3, disclaimer.height/3);
+    image(disclaimer, width/2, height/2, disclaimer.width/3.5, disclaimer.height/3.5);
   }
 
   if (disclaimerPrompt === true) {
